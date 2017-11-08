@@ -69,12 +69,12 @@
             <!-- <div class="row"> -->
 
                <div class="input-field">
-                <input name="username" type="text" class="validate" required="Please enter a Username">
+                <input name="username" type="text" class="validate" required>
                 <label for="last_name">Username</label>
               </div>
 
               <div class="input-field">
-                <input name="password" type="password" class="validate" required="Please enter your password">
+                <input name="password" type="password" class="validate" required>
                 <label for="password">Password</label>
               <!-- </div> -->
             </div>         
