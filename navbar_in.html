@@ -8,7 +8,7 @@
 	<!-- Dropdown Structure -->
 	<ul id="dropdown1" class="dropdown-content">
 	  <li><a href="#">Edit Profile</a></li>
-	  <li><a href="#"></a></li>
+	  <!-- <li><a href="#"></a></li> -->
 	  <li class="divider"></li>
 	  <li><a href="#">Logout</a></li>
 	</ul>
@@ -31,18 +31,18 @@
 	          	<h2 class="header">Make Appointment</h2>
 	          	<img class="responsive-img" src="assets/img/client_user.png">
 
-	          	<form class="col s12" action="" method="POST">	             
+	          	<form class="col s12" action="test.php" method="get">	             
 	              	<h5>Date And Time</h5>
 	              	<br>
 	            	<div class="row">
 	              		<div class="col s6">
 	              			<label for="date">Date of Appointment</label>
-	              			<input id="date" type="text" class="datepicker">
+	              			<input name="date" id="date" type="text" class="datepicker">
 	              		</div>              
 
 		            	<div class="col s6">
 		              		<label for="time">Time of Appointment</label>
-		                	<input id="time" type="text" class="timepicker">				
+		                	<input name="time" id="time" type="text" class="timepicker">				
 		            	</div>
 	            	</div>
 
@@ -50,7 +50,7 @@
 	            		<h5>Hospital</h5>
 	            		
 	            	</div>         
-	            	<button class="btn waves-effect  teal lighten-2" type="submit" name="action" >Send</button>
+	            	<button  class="btn waves-effect  teal lighten-2" type="submit"><i class="material-icons left">send</i> Send</button>
 	          </form> 	          
 	        </div>
 	    </div>
@@ -64,7 +64,7 @@
     today: 'Today',
     clear: 'Clear',
     close: 'Ok',
-    closeOnSelect: false // Close upon selecting a date,
+    closeOnSelect: false // Close upon selecting a date, 
   });
 
    $('.timepicker').pickatime({
@@ -78,6 +78,13 @@
     ampmclickable: true, // make AM PM clickable
     aftershow: function(){} //Function for after opening timepicker
   });
+</script>
+
+<script>
+	function myfunction()
+	{
+		window.alert(document.getElementById("date").innerHTML);
+	}
 </script>
 
 </html>
