@@ -7,6 +7,7 @@
 
  ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +41,7 @@
 	          	<h2 class="header">Make Appointment</h2>
 	          	<img class="responsive-img" src="assets/img/client_user.png">
 
-	          	<form class="col s12" action="test.php" method="get">	             
+	          	<form class="col s12" action="make_appoint.php" method="post">	             
 	              	<h5>Date And Time</h5>
 	              	<br>
 	            	<div class="row">
@@ -63,7 +64,7 @@
 	            				<?php 
 	            					while($row = mysqli_fetch_assoc($result)) {
 	            					?>
-										<option value=""><?php echo $row["name"]; ?></option>
+										<option value="<?php echo $row["name"]; ?>"><?php echo $row["name"]; ?></option>
 										<?php } ?>         
 	            			</select>
 	            		</div>
