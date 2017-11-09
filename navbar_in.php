@@ -18,7 +18,7 @@
 	<!-- Dropdown Structure -->
 	<ul id="dropdown1" class="dropdown-content">
 	  <li><a href="#">Edit Profile</a></li>
-	  <!-- <li><a href="#"></a></li> -->
+	  <li><a href="#"></a>View Appointments</li>
 	  <li class="divider"></li>
 	  <li><a href="#">Logout</a></li>
 	</ul>
