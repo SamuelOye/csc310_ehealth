@@ -14,7 +14,7 @@
       $sql = "SELECT user_name FROM users WHERE user_name = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+      // $active = $row['active'];
       
       $count = mysqli_num_rows($result);
       
@@ -70,7 +70,7 @@
 
                <div class="input-field">
                 <input name="username" type="text" class="validate" required>
-                <label for="last_name">Username</label>
+                <label for="username">Username</label>
               </div>
 
               <div class="input-field">
