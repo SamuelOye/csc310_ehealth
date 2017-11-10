@@ -20,7 +20,7 @@
 	  <li><a href="profile.php">Edit Profile</a></li>
 	  <li><a href="#">View Appointments</a></li>
 	  <li class="divider"></li>
-	  <li><a href="#">Logout</a></li>
+	  <li><a href="#confirm">Logout</a></li>
 	</ul>
 	
 	<nav>
@@ -75,6 +75,23 @@
 	        </div>
 	    </div>
   	</div>
+	
+	<div id="confirm" class="modal" style="padding:0px;">
+  	<div class="modal-content">
+  		<div class="center-align container">
+  	      	<h4 class="header">Confirm</h4>	
+  	      	<p>Are you sure you want to Logout</p>
+  	      	<div class="row">
+  	      		<div class="col s6">
+  	      			<a class="btn waves-effect" href="logout.php">Yes</a>
+  	      		</div>
+  	      		<div class="col s6">
+  	      			<a class="btn waves-effect" onclick=" $('#confirm').modal('close');">No</a>
+  	      		</div>
+  	      	</div>          	
+  	    </div>
+  	</div>
+  </div>
 </body>
 
 <script>
