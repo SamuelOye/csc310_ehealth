@@ -2,8 +2,8 @@
 	include_once("connect.php");
 	include("session.php");
 	$user = $_SESSION['login_user'];	
-	$sql = "SELECT `appoint_id`,`appoint_date`,`appoint_time`,`hospital` from appointments where user_name='$user'";
-	$result = mysqli_query($conn,$sql);
+	$sql = "SELECT `appointment_id`,`appoint_date`,`appoint_time`,`hospital` from appointments where user_name='$user'";
+	$results = mysqli_query($conn,$sql);
 	?>
 
 <!DOCTYPE html>
@@ -19,8 +19,14 @@
   <link href="materialize/css/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+	<?php include("navbar_in.php");
+	 echo $user;  echo $row;
+	while($row = mysqli_fetch_assoc($result)) {
+		 echo $row["appoint_date"];
+		 echo $row["appoint_time"];
+
+	}	?>
 	<div class="container">
-		<?php include("navbar_in.php"); ?>
 		<h5>View Appointments</h5>
 
 		<div>
@@ -38,7 +44,7 @@
 					while($row = mysqli_fetch_assoc($result)) {
 					?>
 						<tr>
-							<td><?php echo $row["appoint_id"];?></td>
+							<td><?php echo $row["appointment_id"];?></td>
 							<td><?php echo $row["appoint_date"];?></td>
 							<td><?php echo $row["appoint_time"];?></td>
 							<td><?php echo $row["hospital"];?></td>

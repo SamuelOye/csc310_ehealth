@@ -18,7 +18,7 @@
 	<!-- Dropdown Structure -->
 	<ul id="dropdown1" class="dropdown-content">
 	  <li><a href="profile.php">Edit Profile</a></li>
-	  <li><a href="#">View Appointments</a></li>
+	  <li><a href="appointments.php">View Appointments</a></li>
 	  <li class="divider"></li>
 	  <li><a href="#confirm">Logout</a></li>
 	</ul>
@@ -115,13 +115,6 @@
     ampmclickable: true, // make AM PM clickable
     aftershow: function(){} //Function for after opening timepicker
   });
-</script>
-
-<script>
-	function myfunction()
-	{
-		window.alert(document.getElementById("date").innerHTML);
-	}
 </script>
 
 </html>
