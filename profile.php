@@ -12,7 +12,7 @@
 </head>
 <body>
 	<?php include("navbar_in.php"); ?>
-	<div class="container">
+	<div id="profile" class="container">
 		<h3>Edit Profile</h3>
 			<form action="edit_profile.php" method="post">
 				<h5>Name:</h5>
@@ -63,10 +63,27 @@
 		          </div>
 		          <div > -->
 		          	<button class="btn waves-effect  teal lighten-2" type="submit"><i class="material-icons left">save</i>Save</button>
-		          	<a class="btn waves-effect  " href="hompage.php"><i class="material-icons left">cancel</i>Cancel</a>
+		          	<a class="btn waves-effect  " href="#confirm" ><i class="material-icons left">cancel</i>Cancel</a>
 		          </div>
 		          		
 			</form>	
+
+			<div id="confirm" class="modal" style="padding:0px;">
+	    <div class="modal-content">
+	    	<div class="center-align container">
+	          	<h4 class="header">Confirm</h4>	
+	          	<p>Are you sure you want to cancel</p>
+	          	<div class="row">
+	          		<div class="col s6">
+	          			<a class="btn waves-effect" href="hompage.php">Yes</a>
+	          		</div>
+	          		<div class="col s6">
+	          			<a class="btn waves-effect" onclick=" $('#confirm').modal('close');">No</a>
+	          		</div>
+	          	</div>          	
+	        </div>
+	    </div>
+  	</div>
 	</div>
 	
 	<br>
