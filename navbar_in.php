@@ -1,3 +1,13 @@
+<!-- Script for populating Hospital select box -->
+
+<?php 
+	include_once("connect.php");	
+	$sql = "SELECT name from hospitals";
+	$result = mysqli_query($conn,$sql);	
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +18,7 @@
 	<!-- Dropdown Structure -->
 	<ul id="dropdown1" class="dropdown-content">
 	  <li><a href="#">Edit Profile</a></li>
-	  <!-- <li><a href="#"></a></li> -->
+	  <li><a href="#"></a>View Appointments</li>
 	  <li class="divider"></li>
 	  <li><a href="#">Logout</a></li>
 	</ul>
@@ -31,18 +41,18 @@
 	          	<h2 class="header">Make Appointment</h2>
 	          	<img class="responsive-img" src="assets/img/client_user.png">
 
-	          	<form class="col s12" action="test.php" method="get">	             
+	          	<form class="col s12" action="make_appoint.php" method="post">	             
 	              	<h5>Date And Time</h5>
 	              	<br>
 	            	<div class="row">
 	              		<div class="col s6">
 	              			<label for="date">Date of Appointment</label>
-	              			<input name="date" id="date" type="text" class="datepicker">
+	              			<input name="date" id="date" type="text" class="datepicker" required>
 	              		</div>              
 
 		            	<div class="col s6">
 		              		<label for="time">Time of Appointment</label>
-		                	<input name="time" id="time" type="text" class="timepicker">				
+		                	<input name="time" id="time" type="text" class="timepicker" required>				
 		            	</div>
 	            	</div>
 
@@ -51,8 +61,11 @@
 	            		<div class="input-field">
 	            			<select name="hospital" id="">
 	            				<option value="" disabled selected>Choose your hospital</option>
-	            				<option value=""></option>
-	            				<option value=""></option>
+	            				<?php 
+	            					while($row = mysqli_fetch_assoc($result)) {
+	            					?>
+										<option value="<?php echo $row["name"]; ?>"><?php echo $row["name"]; ?></option>
+										<?php } ?>         
 	            			</select>
 	            		</div>
 	            		

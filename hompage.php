@@ -17,7 +17,7 @@
 
 
 <body>
-    <?php include("navbar_in.html"); ?>
+    <?php include("navbar_in.php"); ?>
 
   <div class="slider"  >
     <ul class="slides">

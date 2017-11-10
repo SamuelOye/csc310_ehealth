@@ -11,6 +11,7 @@ $gender = $_POST["gender"];
 
 $sql = "INSERT INTO users values('$username','$firstname','$lastname','$password','$email','$gender')";
 
+
  mysqli_query($conn,$sql) or die("Could not insert post" . mysqli_error($conn)); 
 
  header("Location: hompage.php");
