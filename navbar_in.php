@@ -18,7 +18,7 @@
 	<!-- Dropdown Structure -->
 	<ul id="dropdown1" class="dropdown-content">
 	  <li><a href="profile.php">Edit Profile</a></li>
-	  <!-- <li><a href="appointments.php" disabled>View Appointments</a></li> -->
+	  <!-- <li><a href="appointments.php" disabled>View Appointments</a></li> <--></-->
 	  <li class="divider"></li>
 	  <li><a href="#confirm">Logout</a></li>
 	</ul>
