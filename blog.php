@@ -14,11 +14,8 @@
   <link href="materialize/css/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-	<?php if(!isset($_SESSION['login_user'])){
-      include("navbar_out.php");
-   }
-   		else
-   			{include("navbar_in.php");}
+	<?php
+   			include("navbar_in.php");
     ?>
 	<div class="center-align container">
 		<h1>Blog is Coming Soon!</h1>
