@@ -29,7 +29,7 @@
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li><a class="dropdown-button" href="#" data-activates="dropdown1">My Profile<i class="material-icons right">arrow_drop_down</i></a></li>
 	        <li><a href="#appoint">Make Appointment</a></li>
-	        <li><a href="collapsible.html">Blog</a></li>
+	        <li><a href="blog.php">Blog</a></li>
 	        <li><a href="#about">About</a></li>
 	      </ul>
 	    </div>
